@@ -1,0 +1,8 @@
+# Ignore everything
+*
+
+# Except vim config
+!.gitignore
+!.vim/
+!.vim/*
+!.vim/colors/*
