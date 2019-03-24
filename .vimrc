@@ -59,7 +59,7 @@ set guioptions-=r  " remove right-hand scroll bar
 set guioptions-=L  " remove left-hand scroll bar
 set guioptions=    " remove all
 
-if has("gui_running") && g:os=='windows'
+if has("gui_running") && g:os=='Windows'
     set lines=35 columns=120
     winpos 300 60
 endif
@@ -107,7 +107,7 @@ cnoremap <C-j> <down>
 cnoremap <C-k> <up>
 cnoremap <C-l> <right>
 
-if has("gui_running") && g:os=='windows'
+if has("gui_running") && g:os=='Windows'
     map <A-j> :move +<CR>
     map <A-k> :move -2<CR>
     inoremap <A-j> <ESC>:move +<CR>==gi
@@ -172,12 +172,10 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_aggregating_errors = 1
-if (g:os == 'Darwin')
-    let g:syntastic_error_symbol = '❌'
-    let g:syntastic_style_error_symbol = '⁉️'
-    let g:syntastic_warning_symbol = '⚠️'
-    let g:syntastic_style_warning_symbol = '💩'
-endif
+let g:syntastic_error_symbol = '❌'
+let g:syntastic_style_error_symbol = '⁉️'
+let g:syntastic_warning_symbol = '⚠️'
+let g:syntastic_style_warning_symbol = '💩'
 highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
 highlight link SyntasticStyleErrorSign SignColumn
