@@ -83,6 +83,7 @@ map <leader>tm :tabmove
 map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 map <leader>pp "*p
+map <leader>yy "*y
 map <leader>] :lnext<cr>
 map <leader>[ :lprevious<cr>
 
@@ -106,6 +107,8 @@ cnoremap <C-h> <left>
 cnoremap <C-j> <down>
 cnoremap <C-k> <up>
 cnoremap <C-l> <right>
+cnoremap <leader>pp <C-r>*
+cnoremap <leader>p <C-r>" 
 
 if has("gui_running") && g:os=='Windows'
     map <A-j> :move +<CR>
@@ -190,3 +193,6 @@ au VimEnter *.js au BufWritePost *.js checktime
 
 " Ack
 map <leader>a :Ack! 
+
+" YCM
+let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py"
