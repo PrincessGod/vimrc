@@ -194,5 +194,11 @@ au VimEnter *.js au BufWritePost *.js checktime
 " Ack
 map <leader>a :Ack! 
 
-" YCM
-let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py"
+" YCMlet g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+map <leader>ff :YcmCompleter FixIt<CR>
+map <leader>gg :YcmCompleter GoTo<CR>
+map <leader>dd :YcmCompleter GetDoc<CR>
+
+" Vim Better Whitesapce
+map <leader>tt :ToggleWhitespace<CR>
+map <leader>ta :StripWhitespace<CR>
