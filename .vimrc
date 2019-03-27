@@ -193,8 +193,12 @@ au VimEnter *.js au BufWritePost *.js checktime
 
 " Ack
 map <leader>a :Ack! 
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep'
+endif
 
-" YCMlet g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+" YCM
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 map <leader>ff :YcmCompleter FixIt<CR>
 map <leader>gg :YcmCompleter GoTo<CR>
 map <leader>dd :YcmCompleter GetDoc<CR>
