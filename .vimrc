@@ -59,9 +59,9 @@ set guioptions-=r  " remove right-hand scroll bar
 set guioptions-=L  " remove left-hand scroll bar
 set guioptions=    " remove all
 
-if has("gui_running") && g:os=='Windows'
+if has("gui_running")
     set lines=35 columns=120
-    winpos 300 60
+    winpos 250 60
 endif
 
 let mapleader=","
