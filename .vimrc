@@ -68,6 +68,7 @@ let mapleader=","
 map <space> :
 map <c-space> /
 map <silent> <leader><cr> :noh<cr>
+map <C-a> <esc>ggVG<CR>
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
