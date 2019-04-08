@@ -200,6 +200,7 @@ endif
 
 " YCM
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>ff :YcmCompleter FixIt<CR>
 map <leader>gg :YcmCompleter GoTo<CR>
 map <leader>dd :YcmCompleter GetDoc<CR>
